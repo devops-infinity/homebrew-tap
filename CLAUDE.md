@@ -2,10 +2,6 @@
 
 Instructions for an AI agent working in this repository. `CLAUDE.md` and `AGENTS.md` carry identical text under two names, so every tool finds the rules under the name it looks for. Change one and copy it to the other in the same run.
 
-## Precedence
-
-The Claude Code global constitution at `~/.claude/skills/constitution/constitution.md` (mirrored at `~/.agents/skills/constitution/constitution.md` for Codex) outranks this file and every convention in it. This repository has no project-specific constitution at `.specify/memory/constitution.md` or a root `constitution.md`.
-
 ## What this repository is
 
 This is a Homebrew tap. Once OwnPG ships its first release, this repository holds one file that matters, `Formula/ownpg.rb`, generated from the `devops-infinity/ownpg` repository's own release process and pushed here directly to `main`. Nothing else lives here beyond `README.md` and this file. See `README.md` for the install commands; this file does not restate them.
