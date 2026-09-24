@@ -1,35 +1,37 @@
 class Ownpg < Formula
   desc "OwnPG serves PostgreSQL DBA tools to AI clients over the Model Context Protocol, one database and one schema per run"
   homepage "https://github.com/devops-infinity/ownpg-releases"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.0/ownpg-aarch64-apple-darwin.tar.gz"
-      sha256 "8d024fab2c515dedcf2f9658270fb3bfbf42f2b8012519bf5dacdad44b9b97ad"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-aarch64-apple-darwin.tar.gz"
+      sha256 "da5b43e81942a0d379c33b500a047480069f8013f3c9b956b03c4c17d205d798"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.0/ownpg-x86_64-apple-darwin.tar.gz"
-      sha256 "2534ca0fefde79b5343e14bed86ce1eeb0f9e466f6cdbd33d80a48094e8e7ef7"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-x86_64-apple-darwin.tar.gz"
+      sha256 "caa8b103492a888704e8ab191ac9a4c2d74a1e0cd49e3ff9f6df96fb80356c86"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.0/ownpg-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5da18b872941594a5a67140fc3c7b3ae1d031259b1221cbfc6539fa65e94a8ed"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9cee464751768e429113351eee99345c7491b258442b662f489663d920b6dd3a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.0/ownpg-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0e4f48ff3c0f16e9b41cfce6466511174af277980b898d2bd275acf54842083f"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "5cb9c7b5bcb3ce569ad05812671d8b7eaf3c3f7b90c2f8933aebe57cab4cebac"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
+    "aarch64-pc-windows-gnu": {},
     "aarch64-unknown-linux-gnu": {},
     "aarch64-unknown-linux-musl-dynamic": {},
     "aarch64-unknown-linux-musl-static": {},
     "x86_64-apple-darwin": {},
+    "x86_64-pc-windows-gnu": {},
     "x86_64-unknown-linux-gnu": {},
     "x86_64-unknown-linux-musl-dynamic": {},
     "x86_64-unknown-linux-musl-static": {}
