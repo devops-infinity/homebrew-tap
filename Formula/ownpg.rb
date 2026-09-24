@@ -1,25 +1,25 @@
 class Ownpg < Formula
   desc "OwnPG serves PostgreSQL DBA tools to AI clients over the Model Context Protocol, one database and one schema per run"
   homepage "https://github.com/devops-infinity/ownpg-releases"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-aarch64-apple-darwin.tar.gz"
-      sha256 "da5b43e81942a0d379c33b500a047480069f8013f3c9b956b03c4c17d205d798"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.2/ownpg-aarch64-apple-darwin.tar.gz"
+      sha256 "b56b6e6d8aa2e3f567a5b71dbf7c08e3c738aea950b5c1712e60ced9d9d1d249"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-x86_64-apple-darwin.tar.gz"
-      sha256 "caa8b103492a888704e8ab191ac9a4c2d74a1e0cd49e3ff9f6df96fb80356c86"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.2/ownpg-x86_64-apple-darwin.tar.gz"
+      sha256 "b5fa2c814bde9a4d201617175658f9fe7c4cbbe303a772f5ef6f077d13052834"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "9cee464751768e429113351eee99345c7491b258442b662f489663d920b6dd3a"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.2/ownpg-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "831243ef6f060063d7dbc2bee8506de6513696698bb6e75c237b49ddcc40d173"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.1/ownpg-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5cb9c7b5bcb3ce569ad05812671d8b7eaf3c3f7b90c2f8933aebe57cab4cebac"
+      url "https://github.com/devops-infinity/ownpg-releases/releases/download/v0.1.2/ownpg-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "993d914adad7cb22eb14863391393c15d65064cf710b17acb706f95ac96fbc45"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
