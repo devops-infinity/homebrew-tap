@@ -3,22 +3,22 @@ class Ownserp < Formula
   homepage "https://github.com/devops-infinity/ownserp"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v1.2.1/ownserp-aarch64-apple-darwin.tar.gz"
-      sha256 "0b0dd2691c45f6f4c5c486110af4c93247b1183f818c477b1c7304de4fba6f6f"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v1.3.0/ownserp-aarch64-apple-darwin.tar.gz"
+      sha256 "bd4a04fbe054f2629ddeab4030796f85b0c032e5960add8d531729db133d7b97"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v1.2.1/ownserp-x86_64-apple-darwin.tar.gz"
-      sha256 "27afc82ce296122e985f0b55978abd73096edcd5205de8da1943ba71f7de7321"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v1.3.0/ownserp-x86_64-apple-darwin.tar.gz"
+      sha256 "6791f61cc2957e063c84d28679b67b977003377e3fced5858042028f9a4991fa"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v1.2.1/ownserp-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e707f350fbae15522a07eb68df33b6348fd529035a0ec03c2fa5b2fc65f03da1"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v1.3.0/ownserp-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c0edc40be62d7391f81e9b0be475f4f8d16d6c9141f98291619e0a508d349d2b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v1.2.1/ownserp-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5e16fca3d38a250b9de01d91dfbd340b662fd98c7d9e3b7a0a9b5e4e09515a4e"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v1.3.0/ownserp-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d70d738d9104f7c021ad865c95fd162a3c6e2a233d29a6775008d761bebaa57c"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
