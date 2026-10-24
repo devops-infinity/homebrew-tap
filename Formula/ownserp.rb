@@ -2,17 +2,17 @@ class Ownserp < Formula
   desc "MCP server for the Serper.dev search API with per-call credit accounting"
   homepage "https://github.com/devops-infinity/ownserp"
   if OS.mac?
-    url "https://github.com/devops-infinity/ownserp/archive/refs/tags/v1.0.0.tar.gz"
-    sha256 "4a719aaa08122e39723cd3c01e718fba4637bf516dede01eefeee0f69b3f2db3"
+    url "https://github.com/devops-infinity/ownserp/archive/refs/tags/v1.1.0.tar.gz"
+    sha256 "253727c5769d1bf5fc98d1b453e9b6b572adfcc871d864bf4fb99a1c4ba35252"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v1.0.0/ownserp-1.0.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "eac610b728dbd26d71e1644d55e66d3716bc6ee5c6829657b0cf3b8aec05a32a"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v1.1.0/ownserp-1.1.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "3363652580987a94578a5f4b782ba7aa40a00822340589356b3eba1881d24fe1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v1.0.0/ownserp-1.0.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "49e558d05df20d08cd2f9fcb0b3cd4779e732e471e66afd76ee8b5ce1c902471"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v1.1.0/ownserp-1.1.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bc7c9ec3914e059a3ac97e6e4a58e5f8575b258e6e1293c0c85ae4ac6fb8816d"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
