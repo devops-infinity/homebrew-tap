@@ -1,7 +1,6 @@
 class Ownserp < Formula
   desc "MCP server for the Serper.dev search API with per-call credit accounting"
   homepage "https://github.com/devops-infinity/ownserp"
-  version "0.1.2"
   if OS.mac?
     url "https://github.com/devops-infinity/ownserp/archive/refs/tags/v0.1.2.tar.gz"
     sha256 "6b1fdc89224ff358b3f5adb49a287a26114e710c4fd2ef84ef0a7e22f41438be"
