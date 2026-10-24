@@ -2,17 +2,17 @@ class Ownserp < Formula
   desc "MCP server for the Serper.dev search API with per-call credit accounting"
   homepage "https://github.com/devops-infinity/ownserp"
   if OS.mac?
-    url "https://github.com/devops-infinity/ownserp/archive/refs/tags/v0.1.2.tar.gz"
-    sha256 "6b1fdc89224ff358b3f5adb49a287a26114e710c4fd2ef84ef0a7e22f41438be"
+    url "https://github.com/devops-infinity/ownserp/archive/refs/tags/v0.1.3.tar.gz"
+    sha256 "c2ef62c71cc9a5567d9bf6f3cd1acb1d6d3637193c1552d68375562dc44bfc78"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v0.1.2/ownserp-0.1.2-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a0c0882e57e1edb22a1920ca08ac6d2a4e0f9b6981c3eee3e8c479c1ad7c5dc3"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v0.1.3/ownserp-0.1.3-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a60926ce8836ceee8c64452e0cdd1af3b81b26f2526ee0480f8a6ee062544d26"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v0.1.2/ownserp-0.1.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a5e46163d007a350315d80b1e184dfe3b1191aff30fb69f024baebe53a9d7ac6"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v0.1.3/ownserp-0.1.3-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "228d2bf1b706fbb85bbd97d891213066aa4aaf38e694aa0d33b21f41d9f05a6b"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -28,6 +28,15 @@ class Ownserp < Formula
     else
       bin.install "ownserp"
     end
+  end
+
+  def caveats
+    <<~EOS
+      The Linux binary is not code signed. Each release publishes a SHA-256 file
+      beside the archive at https://github.com/devops-infinity/ownserp/releases
+      so you can check the download before running it. macOS builds from source,
+      so Gatekeeper does not quarantine the result.
+    EOS
   end
 
   test do
