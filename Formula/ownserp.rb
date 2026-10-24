@@ -6,8 +6,14 @@ class Ownserp < Formula
     sha256 "6b1fdc89224ff358b3f5adb49a287a26114e710c4fd2ef84ef0a7e22f41438be"
   end
   if OS.linux?
-    url "https://github.com/devops-infinity/ownserp/releases/download/v0.1.2/ownserp-0.1.2-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "a5e46163d007a350315d80b1e184dfe3b1191aff30fb69f024baebe53a9d7ac6"
+    if Hardware::CPU.arm?
+      url "https://github.com/devops-infinity/ownserp/releases/download/v0.1.2/ownserp-0.1.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a0c0882e57e1edb22a1920ca08ac6d2a4e0f9b6981c3eee3e8c479c1ad7c5dc3"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/devops-infinity/ownserp/releases/download/v0.1.2/ownserp-0.1.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a5e46163d007a350315d80b1e184dfe3b1191aff30fb69f024baebe53a9d7ac6"
+    end
   end
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/devops-infinity/ownserp.git", branch: "main"
