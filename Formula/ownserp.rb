@@ -1,8 +1,8 @@
 class Ownserp < Formula
   desc "MCP server for the Serper.dev search API with per-call credit accounting"
   homepage "https://github.com/devops-infinity/ownserp"
-  url "https://github.com/devops-infinity/ownserp/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "b6ca59e72f872d166924c3adf598ab00adafbb99da4d3371f0afe5dde5d31960"
+  url "https://github.com/devops-infinity/ownserp/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "6b1fdc89224ff358b3f5adb49a287a26114e710c4fd2ef84ef0a7e22f41438be"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/devops-infinity/ownserp.git", branch: "main"
 
