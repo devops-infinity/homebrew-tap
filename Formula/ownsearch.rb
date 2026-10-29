@@ -1,24 +1,24 @@
 class Ownsearch < Formula
-  desc ", an MCP server for quality-ranked public SearXNG search"
+  desc "MCP server for quality-ranked public SearXNG search"
   homepage "https://github.com/devops-infinity/ownsearch"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.2.0/ownsearch-aarch64-apple-darwin.tar.gz"
-      sha256 "60224f5c6c36eef529249626c3be2d220cf81d8ad4e8cad549e45bb343a7f561"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-aarch64-apple-darwin.tar.gz"
+      sha256 "89552456b86bf172e43aab7947823a03ac5b38e1fa23cc0f3e45d51fdc1df838"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.2.0/ownsearch-x86_64-apple-darwin.tar.gz"
-      sha256 "de82c3609fc6db7c9c4066d470a52a64d7f11d85467a56009e039cc1fa49cec4"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-x86_64-apple-darwin.tar.gz"
+      sha256 "48f1196d33606026d394cbcaabdcdcb4641d5821e364b93df928f7ae37f0fc72"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.2.0/ownsearch-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ce189180739f6cc5319c63ef8a3ad14a17a9219925c3b5439eb07191e97b2653"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c6b8af269567dfa43f530704cc3e6f10d8b7713709dee30e58af068d36d279c9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.2.0/ownsearch-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c376bf87812953629e7e0f4df54e39e9973e0412bfa82fa54af80c05cf09982b"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7b8ca518e90608f02f8d7a103aecab15882fbf1ec9fb834dd67cb2ecfa10669a"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -75,6 +75,6 @@ class Ownsearch < Formula
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
   test do
-    assert_match "OwnSearch", shell_output("#{bin}/ownsearch --version")
+    assert_match version.to_s, shell_output("#{bin}/ownsearch --version")
   end
 end
