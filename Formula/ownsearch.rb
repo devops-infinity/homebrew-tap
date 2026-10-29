@@ -3,22 +3,22 @@ class Ownsearch < Formula
   homepage "https://github.com/devops-infinity/ownsearch"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-aarch64-apple-darwin.tar.gz"
-      sha256 "89552456b86bf172e43aab7947823a03ac5b38e1fa23cc0f3e45d51fdc1df838"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.4.0/ownsearch-aarch64-apple-darwin.tar.gz"
+      sha256 "1f5d4b78cf98cf872b9ec5987460a882542b99d978f99de358037eec29c5a3d7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-x86_64-apple-darwin.tar.gz"
-      sha256 "48f1196d33606026d394cbcaabdcdcb4641d5821e364b93df928f7ae37f0fc72"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.4.0/ownsearch-x86_64-apple-darwin.tar.gz"
+      sha256 "00abf31303f02e0821753a05fc445f6369d1b9a6a135d5687bd1c3e3321f7211"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c6b8af269567dfa43f530704cc3e6f10d8b7713709dee30e58af068d36d279c9"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.4.0/ownsearch-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f2d079f2cc572e37db0115e035a3f2d68f04e385ff1bff94b7226853120ab695"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.3.0/ownsearch-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7b8ca518e90608f02f8d7a103aecab15882fbf1ec9fb834dd67cb2ecfa10669a"
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v0.4.0/ownsearch-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1fd5f4e4d5447335bf7b3a375bae10d0dc2bc0a3a6a34b7a3f26af86d002abe0"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
