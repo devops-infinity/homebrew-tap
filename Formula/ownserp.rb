@@ -1,39 +1,39 @@
 class Ownserp < Formula
-  desc "OwnSERP, an MCP server for the Serper.dev search API, over stdio and Streamable HTTP"
+  desc "MCP server for the Serper.dev search API, over stdio and Streamable HTTP"
   homepage "https://github.com/devops-infinity/ownserp"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v2.0.0/ownserp-aarch64-apple-darwin.tar.gz"
-      sha256 "8437a71b1d31cf8bb2fea5374828bc8559b45f5464ca0c8a64dfc205a1e20644"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v2.1.0/ownserp-aarch64-apple-darwin.tar.gz"
+      sha256 "83a11e3623c01730f93002637d5726edf61d4a4549daaffee54ab9a4e70678c0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v2.0.0/ownserp-x86_64-apple-darwin.tar.gz"
-      sha256 "fcd5dfd1f0553d960eb39cf046229297453f172e88f3b0a9d2f244638f985c8f"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v2.1.0/ownserp-x86_64-apple-darwin.tar.gz"
+      sha256 "d56de6232cba92b5b39b3ad052f7a21c9d549dd4fa6fc7c53e7a1df1a32f0912"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v2.0.0/ownserp-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c88a8da3bf31d845b847d2a0fd09d3bd6688b5e54da1a826987efe98e8ad0415"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v2.1.0/ownserp-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c24fe622350b805b14b8e9070824ca1f8eddff576a2dff551a318b5e159c696e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devops-infinity/ownserp/releases/download/v2.0.0/ownserp-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "404d88449c464799d076342f977f3e74b04552cc3eab0d0acad022869ae61b76"
+      url "https://github.com/devops-infinity/ownserp/releases/download/v2.1.0/ownserp-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "01899668b5c9ab81eb7d81868954bfa3bf5b667cfec2b5caf741c96ff792635e"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
-    "aarch64-unknown-linux-gnu": {},
+    "aarch64-apple-darwin":               {},
+    "aarch64-unknown-linux-gnu":          {},
     "aarch64-unknown-linux-musl-dynamic": {},
-    "aarch64-unknown-linux-musl-static": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {},
-    "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static": {}
-  }
+    "aarch64-unknown-linux-musl-static":  {},
+    "x86_64-apple-darwin":                {},
+    "x86_64-pc-windows-gnu":              {},
+    "x86_64-unknown-linux-gnu":           {},
+    "x86_64-unknown-linux-musl-dynamic":  {},
+    "x86_64-unknown-linux-musl-static":   {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -74,7 +74,6 @@ class Ownserp < Formula
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
-
   test do
     assert_match "OwnSERP", shell_output("#{bin}/ownserp --version")
   end
