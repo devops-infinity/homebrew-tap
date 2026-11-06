@@ -48,34 +48,34 @@ end
 class Ownsearch < Formula
   desc "MCP server that queries search engines directly and merges the results"
   homepage "https://github.com/devops-infinity/ownsearch"
-  version "5.0.1"
+  version "5.0.2"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.1/ownsearch-aarch64-apple-darwin.tar.gz",
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.2/ownsearch-aarch64-apple-darwin.tar.gz",
           using: GitHubReleaseAssetDownloadStrategy
-      sha256 "5ee2aa7f3a63d066eb863ae0e72e7966650482bcaf174bef28385dbf155cee61"
+      sha256 "5384fdeda9dcd675f163b7267af6eab16f81cb21b6168604fed6307dc74624b4"
     end
 
     on_intel do
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.1/ownsearch-x86_64-apple-darwin.tar.gz",
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.2/ownsearch-x86_64-apple-darwin.tar.gz",
           using: GitHubReleaseAssetDownloadStrategy
-      sha256 "150afef1c59612207d63e927875d189e3f39e0372d95c2cb7333b77d047f9ef8"
+      sha256 "8cf3613bf89fd4636df181b90dfe00f4738ea2a6f1a9ad3043484e66ecef049a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.1/ownsearch-aarch64-unknown-linux-gnu.tar.gz",
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.2/ownsearch-aarch64-unknown-linux-gnu.tar.gz",
           using: GitHubReleaseAssetDownloadStrategy
-      sha256 "0fe306d45e0a3a6081017286cda50eaa4417d721cda8e173a183b2fccd689b46"
+      sha256 "67c29e75db8b2026dfadb68ca0e8eedc1e9ef653256b19a7fc408ac860e0833c"
     end
 
     on_intel do
-      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.1/ownsearch-x86_64-unknown-linux-gnu.tar.gz",
+      url "https://github.com/devops-infinity/ownsearch/releases/download/v5.0.2/ownsearch-x86_64-unknown-linux-gnu.tar.gz",
           using: GitHubReleaseAssetDownloadStrategy
-      sha256 "bae860a302b1f8c1d9877d91e6a45cab97368940a809073e1f29bcb925b56e2a"
+      sha256 "6497e97aa3577e9a7d0e842b2da7a6b981c749946a556c034098aae63e943788"
     end
   end
 
@@ -84,6 +84,6 @@ class Ownsearch < Formula
   end
 
   test do
-    assert_match "OwnSearch 5.0.1", shell_output("#{bin}/ownsearch --version")
+    assert_match "OwnSearch 5.0.2", shell_output("#{bin}/ownsearch --version")
   end
 end
