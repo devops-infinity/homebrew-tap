@@ -4,11 +4,11 @@ Instructions for an AI agent working in this repository. `CLAUDE.md` and `AGENTS
 
 ## What this repository is
 
-This is a Homebrew tap. Once OwnPG ships its first release, this repository holds one file that matters, `Formula/ownpg.rb`, generated from the `devops-infinity/ownpg` repository's own release process and pushed here directly to `main`. Nothing else lives here beyond `README.md` and this file. See `README.md` for the install commands; this file does not restate them.
+This is a Homebrew tap. `Formula/` holds one formula per tool: `ownpg.rb`, `ownsearch.rb`, and `ownserp.rb`, each naming a published release of its tool. `README.md` carries the install commands, `SECURITY.md` the security policy, and this file and `AGENTS.md` the agent rules. This file does not restate the install commands.
 
 ## Do
 
-- Edit `README.md` by hand when asked to change this repository's own documentation.
+- Edit `README.md` and `SECURITY.md` by hand when asked to change this repository's own documentation.
 
 ## Don't
 

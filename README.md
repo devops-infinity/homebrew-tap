@@ -2,11 +2,19 @@
 
 Homebrew formulas for the devops-infinity tools.
 
-This tap carries no formula yet. The `ownpg` formula lands under `Formula/` with the first release of OwnPG. Once it does, install with:
+Add the tap, then trust it:
 
 ```sh
 brew tap devops-infinity/tap
+brew trust --tap devops-infinity/tap
+```
+
+Install the tool you need:
+
+```sh
 brew install ownpg
+brew install ownsearch
+brew install ownserp
 ```
 
 Bug reports for OwnPG go to https://github.com/devops-infinity/ownpg-releases/issues.
